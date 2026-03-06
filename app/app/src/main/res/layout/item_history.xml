@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp">
+
+    <!-- 缩略图 -->
+    <ImageView
+        android:id="@+id/historyImage"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="centerCrop" />
+
+    <!-- 中部信息 -->
+    <LinearLayout
+        android:id="@+id/infoContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp">
+
+        <TextView
+            android:id="@+id/historyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="黄瓜"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:textColor="#212121" />
+
+        <TextView
+            android:id="@+id/historyTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2025-10-01 14:30"
+            android:textSize="12sp"
+            android:textColor="#757575"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+    <!-- 右侧箭头 -->
+    <ImageView
+        android:id="@+id/arrowIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@android:drawable/ic_media_play"
+        app:tint="#9E9E9E"
+        android:layout_gravity="center_vertical" />
+
+</LinearLayout>

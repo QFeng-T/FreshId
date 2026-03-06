@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".SettingsActivity">
+
+    <!-- 顶部栏 -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#4CAF50"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:drawableLeft="@android:drawable/ic_dialog_alert"
+            android:drawableTint="#FFFFFF"
+            android:drawablePadding="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="16dp" />
+
+    </LinearLayout>
+
+    <!-- 设置项列表 -->
+    <LinearLayout
+        android:id="@+id/settingsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/topBar">
+
+        <!-- 通用设置分组 -->
+        <TextView
+            android:id="@+id/generalSettingsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="通用设置"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:textColor="#4CAF50"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp" />
+
+        <!-- 语言设置 -->
+        <RelativeLayout
+            android:id="@+id/languageItem"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#FFFFFF"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="语言"
+                android:textSize="16sp"
+                android:textColor="#212121"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/languageValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="简体中文"
+                android:textSize="14sp"
+                android:textColor="#757575"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_media_play"
+                app:tint="#9E9E9E"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+        <!-- 自动保存历史设置 -->
+        <RelativeLayout
+            android:id="@+id/autoSaveItem"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#FFFFFF"
+            android:paddingHorizontal="16dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自动保存历史"
+                android:textSize="16sp"
+                android:textColor="#212121"
+                android:layout_centerVertical="true" />
+
+            <Switch
+                android:id="@+id/autoSaveSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:checked="true" />
+        </RelativeLayout>
+
+        <!-- 关于我们 -->
+        <RelativeLayout
+            android:id="@+id/aboutItem"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#FFFFFF"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="1dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关于我们"
+                android:textSize="16sp"
+                android:textColor="#212121"
+                android:layout_centerVertical="true" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_media_play"
+                app:tint="#9E9E9E"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+        <!-- 检查更新 -->
+        <RelativeLayout
+            android:id="@+id/updateItem"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#FFFFFF"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="1dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="检查更新"
+                android:textSize="16sp"
+                android:textColor="#212121"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/versionValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前版本 v1.0.0"
+                android:textSize="14sp"
+                android:textColor="#757575"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_media_play"
+                app:tint="#9E9E9E"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

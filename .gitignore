@@ -1,0 +1,85 @@
+# 1. 操作系统生成的文件
+.DS_Store        # macOS 文件夹属性
+Thumbs.db        # Windows 缩略图缓存
+
+# 2. IDE / 编辑器配置
+.idea/           # IntelliJ IDEA（Android Studio）
+*.iml
+.vscode/         # VS Code
+.project         # Eclipse
+.classpath
+.settings/
+
+# 3. 构建产物和缓存
+# Android / Kotlin
+.gradle/
+build/
+captures/
+.externalNativeBuild
+.cxx
+*.apk
+*.aab
+*.keystore
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# 一般编译输出
+*.class
+*.o
+*.exe
+
+# 4. 依赖目录
+# Python 虚拟环境
+venv/
+env/
+.env/
+.venv/
+ENV/
+
+# Node.js（如果你使用了任何前端工具）
+node_modules/
+
+# 其他语言依赖
+vendor/
+
+# 5. 敏感信息和本地配置
+local.properties   # Android SDK 路径（因人而异）
+*.conf
+.env               # 环境变量（可能包含密钥）
+secrets.*
+
+# 6. 大型数据文件（数据集、模型）
+# 常见模型格式
+*.pkl
+*.h5
+*.pt
+*.pth
+*.onnx
+*.pb
+*.tflite
+
+# 数据集文件夹（根据你的实际路径调整）
+data/
+datasets/
+models/
+models/experiment_2_unified_freshness/
+*.zip
+*.tar
+*.gz
+*.rar
+
+# 7. 日志和临时文件
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+
+# 8. 版本控制系统自身
+.gitignore       # 通常不需要忽略，但如果你有特殊需求可以保留
